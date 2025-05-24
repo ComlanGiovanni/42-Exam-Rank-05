@@ -64,7 +64,7 @@ void    Warlock::introduce(void) const
 	std::cout << m_name << ": I am " << m_name << ", " << m_title << "!" << std::endl;
 }
 
-// Spell management functions implementation
+// Add to the Warlock the following member functions:
 
 // learnSpell: makes the Warlock learn a spell
 void    Warlock::learnSpell(ASpell *spell)

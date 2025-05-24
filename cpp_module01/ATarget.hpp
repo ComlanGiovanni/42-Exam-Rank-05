@@ -13,23 +13,23 @@
 #ifndef ATARGET_HPP
 # define ATARGET_HPP
 
-# include <string>
+# include <string>				   // It has a type attribute, which is a string
 # include <iostream>
 
 class ASpell;
 
-// Create an ATarget abstract class, in Coplien's form
-class ATarget {
+			//Now you will create an ATarget abstract class, in Coplien's form.
+class ATarget
+{
 
 protected:
 	// It has a type attribute, which is a string
-	std::string		m_type;
+	std::string		type;
 
-public:
-	// Orthodox Canonical Form
-	ATarget(void);
-	ATarget(ATarget const &other);
-	ATarget &operator=(ATarget const &other);
+public:		// Now you will create an ATarget abstract class, in Coplien's form.
+	ATarget(void);//??
+	ATarget(ATarget const &rhs);
+	ATarget &operator=(ATarget const &rhs);
 	virtual ~ATarget(void);
 
 	// It has a constructor that takes its type
@@ -42,9 +42,10 @@ public:
 	// In much the same way as ASpell, it has a clone() pure method
 	virtual ATarget		*clone(void) const = 0;
 
-	// getHitBySpell function that takes a reference to constant ASpell
-	// It will display: <TYPE> has been <EFFECTS>!
+			 // getHitBySpell function that takes a reference to constant ASpell
+								  // It will display: <TYPE> has been <EFFECTS>!
 	void				getHitBySpell(ASpell const &spell) const;
+
 };
 
 #endif // ATARGET_HPP

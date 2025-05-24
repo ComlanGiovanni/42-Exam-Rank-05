@@ -13,44 +13,47 @@
 #include "ASpell.hpp"
 #include "ATarget.hpp"
 
-// Orthodox Canonical Form implementation
-ASpell::ASpell(void) {}
-
-ASpell::ASpell(ASpell const &other)
+ASpell::ASpell(void) 
 {
-	*this = other;
 }
 
-ASpell &ASpell::operator=(ASpell const &other)
+ASpell::ASpell(ASpell const &rhs)
 {
-	if (this != &other)
+	*this = rhs;
+}
+
+ASpell &ASpell::operator=(ASpell const &rhs)
+{
+	if (this != &rhs)
 	{
-		this->m_name = other.m_name;
-		this->m_effects = other.m_effects;
+		this->name = rhs.name;
+		this->effects = rhs.effects;
 	}
-	return *this;
+	return (*this);
 }
 
-ASpell::~ASpell(void) {}
+ASpell::~ASpell(void)
+{
+}
 
-// Constructor that takes name and effects
 ASpell::ASpell(std::string const &name, std::string const &effects) :
-	m_name(name), m_effects(effects) {}
+	name(name), effects(effects)
+{
+}
 
-// Getters implementation - can be called on constant objects
 std::string const &ASpell::getName(void) const
 {
-	return this->m_name;
+	return (this->name);
 }
 
 std::string const &ASpell::getEffects(void) const
 {
-	return this->m_effects;
+	return (this->effects);
 }
 
-// Launch function that calls the target's getHitBySpell with current spell
 void    ASpell::launch(ATarget const &target) const
 {
+	//This one will simply call the getHitBySpell 
+	//of the passed object, passing the current instance as parameter.
 	target.getHitBySpell(*this);
 }
-

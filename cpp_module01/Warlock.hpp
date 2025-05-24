@@ -24,8 +24,8 @@ class Warlock {
 
 private:
 	// It has the following private attributes
-	std::string					m_name;        // * name (string)
-	std::string					m_title;       // * title (string)
+	std::string					name;        // * name (string)
+	std::string					title;       // * title (string)
 	
 	// You will need a new attribute to store the spells your Warlock knows
 	std::map<std::string, ASpell*>		m_spells;

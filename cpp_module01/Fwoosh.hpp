@@ -15,18 +15,18 @@
 
 # include "ASpell.hpp"
 
-// Create an implementation of ASpell called Fwoosh
-class Fwoosh : public ASpell {
+// When all this is done, create an implementation of ASpell called Fwoosh.
+class Fwoosh : public ASpell
+{
 
 public:
-	// Orthodox Canonical Form
 	Fwoosh(void);
 	Fwoosh(Fwoosh const &other);
 	Fwoosh &operator=(Fwoosh const &other);
 	virtual ~Fwoosh(void);
 
-	// Implement the clone() method
-	// In the case of Fwoosh, it will return a pointer to a new Fwoosh object
+	// You will, of course, implement the clone() method. In the case of
+	// Fwoosh, it will return a pointer to a new Fwoosh object.
 	virtual Fwoosh  *clone(void) const;
 };
 

@@ -15,18 +15,17 @@
 
 # include "ATarget.hpp"
 
-// Create a concrete ATarget called Dummy
-class Dummy : public ATarget {
+// In the same way, create a concrete ATarget called Dummy
+class Dummy : public ATarget
+{
 
 public:
-	// Orthodox Canonical Form
 	Dummy(void);
-	Dummy(Dummy const &other);
-	Dummy &operator=(Dummy const &other);
+	Dummy(Dummy const &rhs);
+	Dummy &operator=(Dummy const &rhs);
 	virtual ~Dummy(void);
 
-	// Implement the clone() method
-	// Returns a pointer to a new Dummy object
+	// You must also implement its clone() method.
 	virtual Dummy   *clone(void) const;
 };
 

@@ -14,32 +14,39 @@
 #include "ASpell.hpp"
 #include <iostream>
 
-// Orthodox Canonical Form implementation
-ATarget::ATarget(void) : m_type("") {}
-
-ATarget::ATarget(ATarget const &other) {
-	*this = other;
+ATarget::ATarget(void) : type("") //??
+{
 }
 
-ATarget &ATarget::operator=(ATarget const &other) {
-	if (this != &other) {
-		this->m_type = other.m_type;
-	}
+ATarget::ATarget(ATarget const &rhs)
+{
+	*this = rhs;
+}
+
+ATarget &ATarget::operator=(ATarget const &rhs)
+{
+	if (this != &rhs)
+		this->type = rhs.type;
 	return (*this);
 }
 
-ATarget::~ATarget(void) {}
-
-// Constructor that takes type
-ATarget::ATarget(std::string const &type) : m_type(type) {}
-
-// Getter implementation - can be called on constant objects
-std::string const	&ATarget::getType(void) const {
-	return (this->m_type);
+ATarget::~ATarget(void)
+{
 }
 
-// getHitBySpell implementation - displays the type and spell effects
-void	ATarget::getHitBySpell(ASpell const &spell) const {
-	std::cout << this->m_type << " has been " << spell.getEffects() << "!" << std::endl;
+ATarget::ATarget(std::string const &type) : type(type)
+{
+}
+
+std::string const	&ATarget::getType(void) const
+{
+	return (this->type);
+}
+
+// <TYPE> is the ATarget's type, and <EFFECTS> is the return of the ASpell's
+// getEffects function.
+void	ATarget::getHitBySpell(ASpell const &spell) const
+{
+	std::cout << this->type << " has been " << spell.getEffects() << "!" << std::endl;
 }
 

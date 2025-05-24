@@ -12,9 +12,10 @@
 
 #include "Fwoosh.hpp"
 
-// Orthodox Canonical Form implementation
 // Default constructor will set the name to "Fwoosh" and the effects to "fwooshed"
-Fwoosh::Fwoosh(void) : ASpell("Fwoosh", "fwooshed") {}
+Fwoosh::Fwoosh(void) : ASpell("Fwoosh", "fwooshed")
+{
+}
 
 Fwoosh::Fwoosh(Fwoosh const &other) : ASpell(other)
 {
@@ -30,9 +31,11 @@ Fwoosh &Fwoosh::operator=(Fwoosh const &other)
 	return *this;
 }
 
-Fwoosh::~Fwoosh(void) {}
+Fwoosh::~Fwoosh(void)
+{
+}
 
-// Clone implementation - returns a pointer to a new Fwoosh object
+// In the case of Fwoosh, it will return a pointer to a new Fwoosh object.
 Fwoosh  *Fwoosh::clone(void) const
 {
 	return new Fwoosh();

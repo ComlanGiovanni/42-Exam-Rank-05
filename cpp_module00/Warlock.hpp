@@ -18,6 +18,7 @@
 # include <string>
 # include <iostream>
 
+						// Make a Warlock class. It has to be in Coplien's form.
 class Warlock
 {
 

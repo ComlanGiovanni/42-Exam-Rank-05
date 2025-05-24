@@ -12,29 +12,29 @@
 
 #include "Dummy.hpp"
 
-// Orthodox Canonical Form implementation
 // The type of Dummy is "Target Practice Dummy"
-Dummy::Dummy(void) : ATarget("Target Practice Dummy") {}
-
-Dummy::Dummy(Dummy const &other) : ATarget(other)
+Dummy::Dummy(void) : ATarget("Target Practice Dummy")
 {
-	*this = other;
 }
 
-Dummy &Dummy::operator=(Dummy const &other)
+Dummy::Dummy(Dummy const &rhs) : ATarget(rhs)
 {
-	if (this != &other)
-	{
-		ATarget::operator=(other);
-	}
-	return *this;
+	*this = rhs;
 }
 
-Dummy::~Dummy(void) {}
+Dummy &Dummy::operator=(Dummy const &rhs)
+{
+	if (this != &rhs)
+		ATarget::operator=(rhs);
+	return (*this);
+}
+
+Dummy::~Dummy(void)
+{
+}
 
 // Clone implementation - returns a pointer to a new Dummy object
 Dummy   *Dummy::clone(void) const
 {
-	return new Dummy();
+	return (new Dummy());
 }
-
