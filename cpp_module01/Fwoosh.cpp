@@ -25,9 +25,7 @@ Fwoosh::Fwoosh(Fwoosh const &other) : ASpell(other)
 Fwoosh &Fwoosh::operator=(Fwoosh const &other)
 {
 	if (this != &other)
-	{
 		ASpell::operator=(other);
-	}
 	return *this;
 }
 
@@ -38,6 +36,6 @@ Fwoosh::~Fwoosh(void)
 // In the case of Fwoosh, it will return a pointer to a new Fwoosh object.
 Fwoosh  *Fwoosh::clone(void) const
 {
-	return new Fwoosh();
+	return (new Fwoosh());
 }
 

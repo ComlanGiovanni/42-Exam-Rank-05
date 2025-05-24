@@ -46,6 +46,7 @@ public:			  	 //Create an abstract class called ASpell, in Coplien's form
 					 // Finally, add to your ASpell class a launch function that 
 									   // takes a reference to constant ATarget.
 	void			launch(ATarget const &target) const;
+
 };
 
 #endif // ASPELL_HPP

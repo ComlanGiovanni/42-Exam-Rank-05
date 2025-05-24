@@ -12,56 +12,47 @@
 
 #include "Warlock.hpp"
 
-// Constructor with name and title
 Warlock::Warlock(std::string const &name, std::string const &title) :
-	m_name(name), m_title(title)
+	name(name), title(title)
 {
-	// When a Warlock is created, he says:
-	// <NAME>: This looks like another boring day.
-	std::cout << m_name << ": This looks like another boring day." << std::endl;
+	std::cout << name << ": This looks like another boring day." << std::endl;
 }
 
-// Destructor - clean up learned spells
 Warlock::~Warlock(void)
 {
-	// When he dies, he says:
-	// <NAME>: My job here is done!
-	std::cout << m_name << ": My job here is done!" << std::endl;
+	std::cout << name << ": My job here is done!" << std::endl;
 
-	// Clean up the spells map
-	std::map<std::string, ASpell*>::iterator it = m_spells.begin();
-	std::map<std::string, ASpell*>::iterator ite = m_spells.end();
+	// Clean up the learned spells map
+	//replace it and ite by beging and end or conventional name
+	std::map<std::string, ASpell*>::iterator it = spells.begin();
+	std::map<std::string, ASpell*>::iterator ite = spells.end();
+	
 	while (it != ite)
 	{
 		delete it->second;
 		++it;
 	}
-	m_spells.clear();
+	spells.clear();
 }
 
-// Getters implementation
 std::string const &Warlock::getName(void) const
 {
-	return m_name;
+	return (name);
 }
 
 std::string const &Warlock::getTitle(void) const
 {
-	return m_title;
+	return (title);
 }
 
-// Setter implementation
 void    Warlock::setTitle(std::string const &title)
 {
-	m_title = title;
+	this->title = title;
 }
 
-// Introduce function implementation
 void    Warlock::introduce(void) const
 {
-	// When he introduces himself, he says:
-	// <NAME>: I am <NAME>, <TITLE>!
-	std::cout << m_name << ": I am " << m_name << ", " << m_title << "!" << std::endl;
+	std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
 }
 
 // Add to the Warlock the following member functions:
@@ -69,37 +60,28 @@ void    Warlock::introduce(void) const
 // learnSpell: makes the Warlock learn a spell
 void    Warlock::learnSpell(ASpell *spell)
 {
+	// Store a copy of the spell in the map
 	if (spell)
-	{
-		// Store a copy of the spell in the map
-		m_spells[spell->getName()] = spell->clone();
-	}
+		spells[spell->getName()] = spell->clone();
 }
 
 // forgetSpell: makes the Warlock forget a spell
 void    Warlock::forgetSpell(std::string const &spellName)
 {
-	// Find the spell in the map
-	std::map<std::string, ASpell*>::iterator it = m_spells.find(spellName);
+	std::map<std::string, ASpell*>::iterator it = spells.find(spellName);
 	
-	// If found, delete it and remove from map
-	if (it != m_spells.end())
+	if (it != spells.end())
 	{
 		delete it->second;
-		m_spells.erase(it);
+		spells.erase(it);
 	}
 }
 
 // launchSpell: launches a spell on a target
 void    Warlock::launchSpell(std::string const &spellName, ATarget const &target)
 {
-	// Find the spell in the map
-	std::map<std::string, ASpell*>::iterator it = m_spells.find(spellName);
-	
-	// If found, launch it on the target
-	if (it != m_spells.end())
-	{
-		it->second->launch(target);
-	}
-}
+	std::map<std::string, ASpell*>::iterator it = spells.find(spellName);
 
+	if (it != spells.end())
+		it->second->launch(target);
+}

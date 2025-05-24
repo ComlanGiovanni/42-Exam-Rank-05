@@ -28,6 +28,7 @@ public:
 	// You will, of course, implement the clone() method. In the case of
 	// Fwoosh, it will return a pointer to a new Fwoosh object.
 	virtual Fwoosh  *clone(void) const;
+
 };
 
 #endif // FWOOSH_HPP

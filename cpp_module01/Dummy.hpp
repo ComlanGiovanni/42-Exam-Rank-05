@@ -27,6 +27,7 @@ public:
 
 	// You must also implement its clone() method.
 	virtual Dummy   *clone(void) const;
+
 };
 
 #endif // DUMMY_HPP
