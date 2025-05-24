@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "Warlock.hpp"
 
 // Of course, whenever we use placeholders like <NAME>, <TITLE>, etc...
