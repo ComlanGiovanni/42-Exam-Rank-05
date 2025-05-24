@@ -13,43 +13,35 @@
 #ifndef WARLOCK_HPP
 # define WARLOCK_HPP
 
+# include <map>
 # include <string>
 # include <iostream>
-# include <map>
 # include "ASpell.hpp"
 # include "ATarget.hpp"
 
-// Make a Warlock class. It has to be in Coplien's form
-class Warlock {
+						// Make a Warlock class. It has to be in Coplien's form.
+class Warlock
+{
 
-private:
-	// It has the following private attributes
-	std::string					name;        // * name (string)
-	std::string					title;       // * title (string)
-	
+private:							// It has the following private attributes :
+	std::string		name;									  // * name (string)
+	std::string		title;									 // * title (string)
 	// You will need a new attribute to store the spells your Warlock knows
 	std::map<std::string, ASpell*>		m_spells;
-
-	// Your Warlock will not be able to be instantiated without parameters
+	
 	Warlock(void);
-	// Your Warlock will not be able to be copied
-	Warlock(Warlock const &other);
-	// Your Warlock will not be able to be assigned
-	Warlock &operator=(Warlock const &other);
+	Warlock(Warlock const &rhs);
+	Warlock &operator=(Warlock const &rhs);
 
 public:
-	// Constructor that takes name and title
 	Warlock(std::string const &name, std::string const &title);
 	~Warlock(void);
 
-	// Getters that return constant references
 	std::string const	&getName(void) const;
 	std::string const	&getTitle(void) const;
 
-	// Setter for title
 	void			setTitle(std::string const &title);
 
-	// Introduce function that displays Warlock's presentation
 	void			introduce(void) const;
 
 	// Spell management functions
