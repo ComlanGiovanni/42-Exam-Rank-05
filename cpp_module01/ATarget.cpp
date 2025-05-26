@@ -12,7 +12,6 @@
 
 #include "ATarget.hpp"
 #include "ASpell.hpp"
-#include <iostream>
 
 ATarget::ATarget(void) : type("") //??
 {

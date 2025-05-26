@@ -13,6 +13,7 @@
 #include "ASpell.hpp"
 #include "ATarget.hpp"
 
+// : name(""), effects("")
 ASpell::ASpell(void) 
 {
 }

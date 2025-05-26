@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 									//Expected files   : Warlock.cpp Warlock.hpp
-
+#pragma once
 #ifndef WARLOCK_HPP
 # define WARLOCK_HPP
 
