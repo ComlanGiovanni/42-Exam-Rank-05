@@ -6,22 +6,21 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 00:22:22 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/22 17:42:08 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/26 21:54:40 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 									//Expected files   : Warlock.cpp Warlock.hpp
 #pragma once
 #ifndef WARLOCK_HPP
-# define WARLOCK_HPP
+#define WARLOCK_HPP
 
-# include <string>
-# include <iostream>
+#include <string> 							 // * name (string) * title (string)
+#include <iostream> 							   // std::cout , std::endl , <<
 
 						// Make a Warlock class. It has to be in Coplien's form.
 class Warlock
 {
-
 private:							// It has the following private attributes :
 	std::string		name;									  // * name (string)
 	std::string		title;									 // * title (string)
@@ -60,5 +59,4 @@ public:
 	void			introduce(void) const;
 };
 
-#endif // WARLOCK_HPP
-
+#endif

@@ -6,15 +6,14 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 00:22:30 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/06 00:27:21 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/26 22:03:28 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ASpell.hpp"
-#include "ATarget.hpp"
+#include "ATarget.hpp"			 /* void launch(ATarget const &target) const; */
 
-// : name(""), effects("")
-ASpell::ASpell(void) 
+ASpell::ASpell(void)
 {
 }
 
@@ -52,9 +51,9 @@ std::string const &ASpell::getEffects(void) const
 	return (this->effects);
 }
 
-void    ASpell::launch(ATarget const &target) const
+void ASpell::launch(ATarget const &target) const
 {
-	//This one will simply call the getHitBySpell 
-	//of the passed object, passing the current instance as parameter.
+								  // This one will simply call the getHitBySpell
+			 // of the passed object, passing the current instance as parameter.
 	target.getHitBySpell(*this);
 }

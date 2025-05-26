@@ -1,4 +1,4 @@
-NAME		= warlock
+NAME		= cpp_module01
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98

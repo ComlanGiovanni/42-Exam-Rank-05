@@ -6,27 +6,16 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 00:22:30 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/06 00:27:21 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/26 21:53:11 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fwoosh.hpp"
 
-// Default constructor will set the name to "Fwoosh" and the effects to "fwooshed"
+// Default constructor will set
+// the name to "Fwoosh" and the effects to "fwooshed"
 Fwoosh::Fwoosh(void) : ASpell("Fwoosh", "fwooshed")
 {
-}
-
-Fwoosh::Fwoosh(Fwoosh const &other) : ASpell(other)
-{
-	*this = other;
-}
-
-Fwoosh &Fwoosh::operator=(Fwoosh const &other)
-{
-	if (this != &other)
-		ASpell::operator=(other);
-	return *this;
 }
 
 Fwoosh::~Fwoosh(void)
@@ -38,4 +27,3 @@ Fwoosh  *Fwoosh::clone(void) const
 {
 	return (new Fwoosh());
 }
-
