@@ -8,9 +8,8 @@ Warlock::Warlock(std::string const &name, std::string const &title) : name(name)
 Warlock::~Warlock(void)
 {
     std::cout << name << ": My job here is done!" << std::endl;
-
-	std::map<std::string, ASpell *>::iterator it = spells.begin();
-	std::map<std::string, ASpell *>::iterator ite = spells.end();
+    std::map<std::string, ASpell *>::iterator it = spells.begin();
+    std::map<std::string, ASpell *>::iterator ite = spells.end();
 
     while (it != ite)
     {
@@ -40,7 +39,7 @@ void Warlock::introduce() const
     std::cout << name << ":" <<  " I am " << name << ", " << title << "!" << std::endl;
 }
 
-void Warlock::learnSpell(ASpell *spell)
+void Warlock::learnSpell(ASpell const *spell)
 {
     if (spell)
         spells[spell->getName()] = spell->clone();
@@ -58,7 +57,6 @@ void Warlock::forgetSpell(std::string const &spellName)
     }
 }
 
-
 void Warlock::launchSpell(std::string const &spellName, ATarget const &target)
 {
     std::map<std::string, ASpell *>::iterator it = spells.find(spellName);
@@ -66,4 +64,22 @@ void Warlock::launchSpell(std::string const &spellName, ATarget const &target)
 
     if (it != ite)
         it->second->launch(target);
+}
+
+int main()
+{
+  Warlock richard("Richard", "the Titled");
+
+  Dummy bob;
+  Fwoosh* fwoosh = new Fwoosh();
+
+  richard.learnSpell(fwoosh);
+
+  richard.introduce();
+  richard.launchSpell("Fwoosh", bob);
+
+  richard.forgetSpell("Fwoosh");
+  richard.launchSpell("Fwoosh", bob);
+
+  delete fwoosh;
 }

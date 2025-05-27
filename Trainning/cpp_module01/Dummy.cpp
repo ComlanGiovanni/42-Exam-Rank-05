@@ -8,7 +8,7 @@ Dummy::~Dummy(void)
 {
 }
 
-Dummy  *Dummy::clone(void) const
+Dummy *Dummy::clone() const
 {
     return (new Dummy());
 }

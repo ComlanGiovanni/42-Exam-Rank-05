@@ -16,11 +16,10 @@ public:
     ATarget(void);
     ATarget(ATarget const &rhs);
     ATarget &operator=(ATarget const &rhs);
-    ATarget (std::string const &type);
+    ATarget(std::string const &type);
     virtual ~ATarget(void);
-    std::string const &getName(void) const;
     std::string const &getType(void) const;
-    virtual ATarget *clone(void) const = 0;
+    virtual ATarget *clone() const = 0;
     void getHitBySpell(ASpell const &spell) const;
 };
 

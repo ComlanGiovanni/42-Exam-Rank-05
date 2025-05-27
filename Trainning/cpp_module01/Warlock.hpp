@@ -7,6 +7,9 @@
 #include <iostream>
 #include "ASpell.hpp"
 #include "ATarget.hpp"
+#include "Warlock.hpp"
+#include "Dummy.hpp"
+#include "Fwoosh.hpp"
 
 class Warlock
 {
@@ -25,7 +28,7 @@ public:
     std::string const &getTitle(void) const;
     void setTitle(std::string const &title);
     void introduce() const;
-    void learnSpell(ASpell *spell);
+    void learnSpell(ASpell const *spell);
     void forgetSpell(std::string const &spellName);
     void launchSpell(std::string const &spellName, ATarget const &target);
 };
