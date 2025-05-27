@@ -22,7 +22,6 @@ class ASpell;											  // Forward declaration
 			//Now you will create an ATarget abstract class, in Coplien's form.
 class ATarget
 {
-
 protected:
 	// It has a type attribute, which is a string
 	std::string type;
@@ -47,7 +46,6 @@ public:		// Now you will create an ATarget abstract class, in Coplien's form.
 								  // It will display: <TYPE> has been <EFFECTS>!
 					   // All these functions can be called on a constant object
 	void getHitBySpell(ASpell const &spell) const;
-
 };
 
 #endif // ATARGET_HPP
