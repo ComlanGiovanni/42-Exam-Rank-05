@@ -1,33 +1,35 @@
-NAME		= warlock
+NAME = a.out
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+SRCS = main.cpp \
+       Warlock.cpp \
+       ASpell.cpp \
+       ATarget.cpp \
+       Fwoosh.cpp \
+       Dummy.cpp \
+       Fireball.cpp \
+       Polymorph.cpp \
+       BrickWall.cpp \
+       SpellBook.cpp \
+       TargetGenerator.cpp
 
-SRCS		= Warlock.cpp \
-			ASpell.cpp \
-			ATarget.cpp \
-			Fwoosh.cpp \
-			Dummy.cpp \
-			Fireball.cpp \
-			Polymorph.cpp \
-			BrickWall.cpp \
-			SpellBook.cpp \
-			TargetGenerator.cpp \
-			main.cpp
+OBJS = $(SRCS:.cpp=.o)
 
-OBJS		= $(SRCS:.cpp=.o)
+all: $(NAME)
 
-all:		$(NAME)
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-$(NAME):	$(OBJS)
-			$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-			rm -f $(OBJS)
+	rm -f $(OBJS)
 
-fclean:		clean
-			rm -f $(NAME)
+fclean: clean
+	rm -f $(NAME)
 
-re:			fclean all
+re: fclean all
 
-.PHONY:		all clean fclean re
+.PHONY: all clean fclean re
