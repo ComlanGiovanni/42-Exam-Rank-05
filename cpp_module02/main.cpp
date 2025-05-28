@@ -6,7 +6,7 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:13:00 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/27 20:15:31 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/28 09:48:52 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 #include "Polymorph.hpp"
 #include "BrickWall.hpp"
 #include "TargetGenerator.hpp"
+
+// int main()
+// {
+// 								   // Phew, that's done. Now here's a test main.
+// 				 // It's not very thorough, so make sure to use your own aswell.
+// }
 
 int main()
 {

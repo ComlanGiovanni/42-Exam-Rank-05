@@ -6,12 +6,12 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 00:22:30 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/26 21:53:55 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/28 09:38:49 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ATarget.hpp"
-#include "ASpell.hpp"		/* void getHitBySpell(ASpell const &spell) const; */
+#include "ASpell.hpp"
 
 ATarget::ATarget(void)
 {
@@ -42,9 +42,6 @@ std::string const	&ATarget::getType(void) const
 	return (this->type);
 }
 
-												   // <TYPE> has been <EFFECTS>!
-	// <TYPE> is the ATarget's type, and <EFFECTS> is the return of the ASpell's
-														 // getEffects function.
 void	ATarget::getHitBySpell(ASpell const &spell) const
 {
 	std::cout << this->type << " has been " \

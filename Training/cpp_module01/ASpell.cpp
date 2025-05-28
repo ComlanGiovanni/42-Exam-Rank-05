@@ -20,7 +20,8 @@ ASpell &ASpell::operator=(ASpell const &rhs)
 	return (*this);
 }
 
-ASpell::ASpell(std::string const &name, std::string const &effects) : name(name), effects(effects)
+ASpell::ASpell(std::string const &name, std::string const &effects) :
+	name(name), effects(effects)
 {
 }
 

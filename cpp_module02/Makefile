@@ -1,4 +1,4 @@
-NAME = a.out
+NAME = cpp_module02
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 

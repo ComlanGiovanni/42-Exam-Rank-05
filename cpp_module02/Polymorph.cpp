@@ -6,12 +6,13 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:13:00 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/27 20:15:31 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/28 09:15:21 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Polymorph.hpp"
 
+			// * Polymorph (Name: "Polymorph", Effects: "turned into a critter")
 Polymorph::Polymorph(void) : ASpell("Polymorph", "turned into a critter")
 {
 }

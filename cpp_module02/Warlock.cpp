@@ -6,58 +6,67 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:13:00 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/27 20:15:31 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/28 09:42:17 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Warlock.hpp"
 
-Warlock::Warlock(std::string const &name, std::string const &title) : name(name), title(title)
+Warlock::Warlock(std::string const &name, std::string const &title) :
+	name(name), title(title)
 {
-    std::cout << name << ": This looks like another boring day." << std::endl;
+	std::cout << name << ": This looks like another boring day." << std::endl;
 }
 
 Warlock::~Warlock(void)
 {
-    std::cout << name << ": My job here is done!" << std::endl;
+	std::cout << name << ": My job here is done!" << std::endl;
+	//??
 }
 
 std::string const &Warlock::getName(void) const
 {
-    return (name);
+	return (name);
 }
 
 std::string const &Warlock::getTitle(void) const
 {
-    return (title);
+	return (title);
 }
 
 void Warlock::setTitle(std::string const &title)
 {
-    this->title = title;
+	this->title = title;
 }
 
 void Warlock::introduce(void) const
 {
-    std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
+	std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
 }
 
+						   // Also make his learnSpell and forgetSpell functions
+												// call those of the spell book.
 void Warlock::learnSpell(ASpell* spell)
 {
-    spellBook.learnSpell(spell);
+	spellBook.learnSpell(spell);
 }
 
+						   // Also make his learnSpell and forgetSpell functions
+												// call those of the spell book.
 void Warlock::forgetSpell(std::string const &spellName)
 {
-    spellBook.forgetSpell(spellName);
+	spellBook.forgetSpell(spellName);
 }
 
+						   // Also make his learnSpell and forgetSpell functions
+												// call those of the spell book.
 void Warlock::launchSpell(std::string const &spellName, ATarget const &target)
 {
-    ASpell* spell = spellBook.createSpell(spellName);
-    if (spell)
-    {
-        spell->launch(target);
-        delete spell;
-    }
+	ASpell* spell = spellBook.createSpell(spellName);
+
+	if (spell)
+	{
+		spell->launch(target);
+		delete spell;
+	}
 }
