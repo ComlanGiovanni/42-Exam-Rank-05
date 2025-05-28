@@ -6,7 +6,7 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:13:00 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/28 09:42:17 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/28 09:59:56 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ Warlock::Warlock(std::string const &name, std::string const &title) :
 Warlock::~Warlock(void)
 {
 	std::cout << name << ": My job here is done!" << std::endl;
-	//??
 }
 
 std::string const &Warlock::getName(void) const
