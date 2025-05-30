@@ -53,7 +53,6 @@ void Warlock::introduce(void) const
 	std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
 }
 
-
 void Warlock::learnSpell(ASpell *spell)
 {
 	if (spell)
@@ -71,7 +70,6 @@ void Warlock::forgetSpell(std::string const &spellName)
 		spells.erase(it);
 	}
 }
-
 
 void Warlock::launchSpell(std::string const &spellName, ATarget const &target)
 {

@@ -6,7 +6,7 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:13:00 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/28 10:35:21 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/30 23:23:17 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ private:
 	std::map<std::string, ASpell*> spells;
 	SpellBook(SpellBook const &rhs);
 	SpellBook &operator=(SpellBook const &rhs);
-
 public:
 	SpellBook(void);
 	~SpellBook(void);

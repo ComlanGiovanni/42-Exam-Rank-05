@@ -14,8 +14,8 @@
 #ifndef TARGETGENERATOR_HPP
 # define TARGETGENERATOR_HPP
 
-# include <string>
 # include <map>
+# include <string>
 # include "ATarget.hpp"
 
 // Make a TargetGenerator class, in canonical form

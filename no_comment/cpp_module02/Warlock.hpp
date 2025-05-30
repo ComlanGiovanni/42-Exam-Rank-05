@@ -6,7 +6,7 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:13:00 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/28 10:34:59 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/30 23:23:35 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ private:
 	Warlock(void);
 	Warlock(Warlock const &rhs);
 	Warlock &operator=(Warlock const &rhs);
-
 public:
 	Warlock(std::string const &name, std::string const &title);
 	~Warlock(void);

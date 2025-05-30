@@ -6,7 +6,7 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 00:22:30 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/28 10:36:03 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/30 23:22:47 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class ASpell
 protected:
 	std::string name;
 	std::string effects;
-
 public:
 	ASpell(void);
 	ASpell(ASpell const &rhs);
