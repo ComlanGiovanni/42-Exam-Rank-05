@@ -6,7 +6,7 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 00:22:22 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/26 21:54:40 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/06/02 15:17:10 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ public:
 				 // a constructor that takes, in this order, its name and title.
 						   // Warlock bob("Bob", "the magnificent");  //Compiles
 						   // Warlock jim("Jim", "the nauseating");   //Compiles
+							   // can put explicit for the constructor if wanted
 	Warlock(std::string const &name, std::string const &title);
 	~Warlock(void);
 

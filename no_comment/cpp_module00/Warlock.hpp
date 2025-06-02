@@ -6,10 +6,9 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 00:22:22 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/30 23:20:24 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/06/02 15:14:17 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #pragma once
 #ifndef WARLOCK_HPP
@@ -20,19 +19,19 @@
 
 class Warlock
 {
+public:
+	Warlock(const std::string& name, const std::string& title);
+	~Warlock();
+	const std::string& getName() const;
+	const std::string& getTitle() const;
+	void setTitle(const std::string& title);
+	void introduce() const;
 private:
 	std::string name;
 	std::string title;
-	Warlock(void);
-	Warlock(Warlock const &rhs);
-	Warlock &operator=(Warlock const &rhs);
-public:
-	Warlock(std::string const &name, std::string const &title);
-	~Warlock(void);
-	std::string const &getName(void) const;
-	std::string const &getTitle(void) const;
-	void setTitle(std::string const &title);
-	void introduce(void) const;
+	Warlock();
+	Warlock(const Warlock& rhs);
+	Warlock& operator=(const Warlock& rhs);
 };
 
 #endif
