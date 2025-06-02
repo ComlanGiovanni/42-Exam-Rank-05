@@ -6,7 +6,7 @@
 /*   By: gicomlan <gicomlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:13:00 by gicomlan          #+#    #+#             */
-/*   Updated: 2025/05/28 09:50:03 by gicomlan         ###   ########.fr       */
+/*   Updated: 2025/05/31 11:12:22 by gicomlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ TargetGenerator::TargetGenerator(void)
 
 TargetGenerator::~TargetGenerator(void)
 {
-	std::map<std::string, ATarget*>::iterator it = targets.begin();
-	std::map<std::string, ATarget*>::iterator ite = targets.end();
+	std::map<std::string, ATarget *>::iterator it = targets.begin();
+	std::map<std::string, ATarget *>::iterator ite = targets.end();
 
 	while (it != ite)
 	{
